@@ -71,6 +71,26 @@ public class Players {
     public String toString() {
         return "Players{" + "playerID=" + playerID + ", playerName=" + playerName + ", jerseyNumber=" + jerseyNumber + ", age=" + age + ", superbowlWins=" + superbowlWins + '}';
     }
+
+    public String getjerseyNumber() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getage() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getsuperbowlWins() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getplayerName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setplayerName(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
