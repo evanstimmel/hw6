@@ -31,11 +31,6 @@
             <input type="text" name="wins" value="" />
             <br>
             <input type="submit" name="submit" value="Submit" />
-        </form>
-        
-        
-        
-        
-        
+        </form>    
     </body>
 </html>
