@@ -3,6 +3,7 @@
 table, th, td {
    border: 1px solid black;
    border-collapse: collapse;
+   color: white;
 }
 th, td {
     padding: 15px;
@@ -18,7 +19,7 @@ th {
 
 tr:hover {background-color: #CCCCCC
 }
-tr:nth-child(even) {background-color: #F2F2F2
+tr:nth-child {background-color: #F2F2F2
 }
 
 th {
@@ -26,7 +27,8 @@ th {
     color: #696969;  
 }
 table {
-    background-color: #F08080
+    background-color: #F08080;
+    color: #FFFFFF
 }
 
 body {background: #D2b48C}

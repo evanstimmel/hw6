@@ -73,6 +73,10 @@ public class ReadQuery {
         
         table += "<table>";
         
+        table += "<tr>";
+             table += "<th>PlayerID</th> <th>Name</th> <th>Number</th> <th>Age</th> <th>Superbowl Wins</th>";
+        table += "</tr>";
+        
             try {
                 while(this.results.next()){
                     
@@ -88,6 +92,7 @@ public class ReadQuery {
                     table += "<td>";
                     table += player.getPlayerID();
                     table += "</td>";
+ 
                     
                     table += "<td>";
                     table += player.getPlayerName();
@@ -110,6 +115,8 @@ public class ReadQuery {
                     table += "</td>";
                     
                     table += "</tr>";
+                   
+                    
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
