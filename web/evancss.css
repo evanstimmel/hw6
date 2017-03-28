@@ -1,0 +1,39 @@
+
+
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
+td {
+    height: 20px;
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+}
+
+tr:hover {background-color: #CCCCCC
+}
+tr:nth-child(even) {background-color: #F2F2F2
+}
+
+th {
+    background-color: #FFFF99;
+    color: #696969;  
+}
+table {
+    background-color: #F08080
+}
+
+body {background: #D2b48C}
+<table style="width:100%">
+
+   
+</table>
+
+</body>
+</html>
