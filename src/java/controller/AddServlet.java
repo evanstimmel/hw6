@@ -82,7 +82,7 @@ public class AddServlet extends HttpServlet {
             int wins = Integer.parseInt(request.getParameter("wins"));
             
             Players player = new Players();
-            player.setplayerName(name);
+            player.setPlayerName(name);
             player.setJerseyNumber(number);
             player.setAge(age);
             player.setSuperbowlWins(wins);
