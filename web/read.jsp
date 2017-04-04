@@ -18,7 +18,8 @@
         <br><br>
         
         <a href ="add">Add A New Player</a>
-        
+        <br> <br>
+        <a href="search.jsp">Search Players</a>
         
         
     </body>

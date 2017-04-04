@@ -14,24 +14,24 @@ import java.util.logging.Logger;
 import model.Players;
 
 
-public class ReadQuery {
+public class SearchQuery {
     
     private Connection conn;
     private ResultSet results;
     
-    public ReadQuery(){
+    public SearchQuery(){
         
         Properties props = new Properties();  //MWC
         InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
             props.load(instr);
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             instr.close();
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         String driver = props.getProperty("driver.name");
@@ -41,32 +41,27 @@ public class ReadQuery {
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             conn = DriverManager.getConnection(url, username, passwd);
         } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
     
-    public void doRead(){
-     
-        
-        try{
-             String query = "Select * FROM players ORDER BY playerID ASC";
-      
-            PreparedStatement ps = conn.prepareStatement(query);
-            this.results = ps.executeQuery();
-     
-        } catch (SQLException ex) {
-        Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
-    }
-    }
-   
     
-    public String getHTMLTable(){
+    public void doSearch (String playername) throws SQLException {
+        
+        String query = "SELECT * FROM players WHERE UPPER (playerName) LIKE ? ORDER BY playerID ASC";
+        
+        PreparedStatement ps = conn.prepareStatement(query);
+        String playerName = null;
+        ps.setString(1, "%" + playerName.toUpperCase() + "%");
+        this.results = ps.executeQuery();
+  }
+    
+     public String getHTMLTable(){
         
         
         String table = "";
@@ -119,7 +114,7 @@ public class ReadQuery {
                     
                 }
             } catch (SQLException ex) {
-                Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
             }
           
                 
@@ -128,8 +123,8 @@ public class ReadQuery {
         
             return table;
         }
-}
-        
-            
     
+}
+
+
 

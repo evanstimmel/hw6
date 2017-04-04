@@ -11,5 +11,7 @@
     <body>
         <h1>Players</h1>
         <a href="read">View All Players</a>
+        <br> <br>
+        <a href="search.jsp">Search Players</a>
     </body>
 </html>

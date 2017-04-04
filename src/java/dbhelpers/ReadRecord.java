@@ -86,10 +86,10 @@ public class ReadRecord {
             this.results.next();
             
             player.setplayerID(this.results.getInt("playerID"));
-            player.setplayerName(this.results.getString("name"));
-            player.setjerseyNumber(this.results.getInt("number"));
-            player.setage(this.results.getInt("age"));
-            player.setsuperbowlWins(this.results.getInt("wins"));
+            player.setPlayerName(this.results.getString("playerName"));
+            player.setJerseyNumber(this.results.getInt("jerseyNumber"));
+            player.setAge(this.results.getInt("age"));
+            player.setSuperbowlWins(this.results.getInt("superbowlWins"));
             
             
         } catch (SQLException ex) {
