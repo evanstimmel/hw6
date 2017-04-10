@@ -68,16 +68,14 @@ public class ReadRecord {
     
     public void doRead() {
     
-        try {
+  
 
-            String query = "SELECT * FROM players WHERE playerID =?";
+        try {
+            String query = "SELECT * FROM players WHERE playerID = ?";
             
-            PreparedStatement ps = null;
-            try {
-                ps = conn.prepareStatement (query);
-            } catch (SQLException ex) {
-                Logger.getLogger(ReadRecord.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
+            PreparedStatement  ps = conn.prepareStatement (query);
+            
             
             ps.setInt(1, playerID);
             
@@ -85,16 +83,17 @@ public class ReadRecord {
             
             this.results.next();
             
-            player.setplayerID(this.results.getInt("playerID"));
+            player.setPlayerID(this.results.getInt("playerID"));
             player.setPlayerName(this.results.getString("playerName"));
             player.setJerseyNumber(this.results.getInt("jerseyNumber"));
             player.setAge(this.results.getInt("age"));
             player.setSuperbowlWins(this.results.getInt("superbowlWins"));
-            
-            
         } catch (SQLException ex) {
             Logger.getLogger(ReadRecord.class.getName()).log(Level.SEVERE, null, ex);
         }
+            
+            
+        
         
 }   
     

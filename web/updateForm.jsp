@@ -23,19 +23,19 @@
         <form name="updateForm" action="updatePlayer" method="get">
             
             <label>Player ID:</label>
-            <input type="text" name="name" value="<%= player.getPlayerID() %>" readonly/>
+            <input type="text" name="id" value="<%= player.getPlayerID() %>" readonly/>
             <br>
             <label>Player Name:</label>
-            <input type="text" name="name" value="<%= player.getPlayerName() %>" readonly/>
+            <input type="text" name="name" value="<%= player.getPlayerName() %>" />
             <br>
             <label>Jersey Number:</label>
-            <input type="text" name="number" value="<%= player.getJerseyNumber() %>" readonly/>
+            <input type="text" name="number" value="<%= player.getJerseyNumber() %>" />
             <br>
             <label>Age:</label>
-            <input type="text" name="age" value="<%= player.getAge() %>" readonly/>
+            <input type="text" name="age" value="<%= player.getAge() %>" />
             <br>
             <label>Super Bowl Wins:</label>
-            <input type="text" name="wins" value="<%= player.getSuperbowlWins() %>" readonly/>
+            <input type="text" name="wins" value="<%= player.getSuperbowlWins() %>" />
             <br>
             <input type="submit" name="submit" value="Update" />
         </form>

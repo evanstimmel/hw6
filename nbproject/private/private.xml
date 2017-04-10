@@ -4,15 +4,15 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/dbhelpers/AddQuery.java</file>
-            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/web/add.jsp</file>
-            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/web/read.jsp</file>
+            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/dbhelpers/SearchQuery.java</file>
             <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/dbhelpers/ReadRecord.java</file>
             <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/controller/UpdateFormServlet.java</file>
             <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/controller/AddServlet.java</file>
             <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/dbhelpers/ReadQuery.java</file>
+            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/model/Players.java</file>
+            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/controller/UpdateServlet.java</file>
+            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/src/java/dbhelpers/UpdateQuery.java</file>
             <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/web/updateForm.jsp</file>
-            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/web/index.jsp</file>
-            <file>file:/C:/Users/Evan%20Stimmel/Desktop/Documents/NetBeansProjects/playersApp/web/evancss.css</file>
         </group>
     </open-files>
 </project-private>

@@ -56,8 +56,7 @@ public class SearchQuery {
         String query = "SELECT * FROM players WHERE UPPER (playerName) LIKE ? ORDER BY playerID ASC";
         
         PreparedStatement ps = conn.prepareStatement(query);
-        String playerName = null;
-        ps.setString(1, "%" + playerName.toUpperCase() + "%");
+        ps.setString(1, "%" + playername.toUpperCase() + "%");
         this.results = ps.executeQuery();
   }
     

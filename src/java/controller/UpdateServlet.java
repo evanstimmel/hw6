@@ -77,7 +77,8 @@ public class UpdateServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException{
+       
        int playerID = Integer.parseInt(request.getParameter("id"));
        String name = request.getParameter("name");
        int number = Integer.parseInt(request.getParameter("number"));
@@ -92,11 +93,7 @@ public class UpdateServlet extends HttpServlet {
        player.setSuperbowlWins(wins);
        
        UpdateQuery uq = new UpdateQuery();
-        try {
-            uq.doUpdate(player);
-        } catch (SQLException ex) {
-            Logger.getLogger(UpdateServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       uq.doUpdate(player);
        
        String url = "/read";
        

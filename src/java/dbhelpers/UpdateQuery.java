@@ -52,17 +52,16 @@ public class UpdateQuery {
     
     }
     
-    public void doUpdate (Players player) throws SQLException{
+    public void doUpdate (Players player) {
         
-        String query = "UPDATE players SET playerName = ?, jerseyNumber = ?, age = ?, superbowlWins = ? WHERE playerID = ?";
-     
-        PreparedStatement ps = null;
         try {
-            ps = conn.prepareStatement(query);
-        } catch (SQLException ex) {
-            Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+            String query = "UPDATE players SET playerName = ?, jerseyNumber = ?, age = ?, superbowlWins = ? WHERE playerID = ?";
+            
+            
+            
+            PreparedStatement ps = conn.prepareStatement(query);
+            
+            
             ps.setString(1, player.getPlayerName());
             ps.setInt(2, player.getJerseyNumber());
             ps.setInt(3, player.getAge());
@@ -70,6 +69,8 @@ public class UpdateQuery {
             ps.setInt(5, player.getPlayerID());
             
             ps.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateQuery.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    
-    }
+}

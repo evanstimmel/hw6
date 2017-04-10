@@ -81,7 +81,7 @@ public class UpdateFormServlet extends HttpServlet {
         
         ReadRecord rr = new ReadRecord(playerID);
         
-        rr.doRead();
+       rr.doRead();
        Players player = rr.getPlayer();
        
        request.setAttribute("player", player);
